@@ -7,18 +7,20 @@ form.addEventListener('submit', function(event){
     const weight = document.getElementById('weight').value;
     const height = document.getElementById('height').value; 
 
-    const bmi = (weight / (height * height).toFixed(2));
+    const bmi = (weight / (height * height)).toFixed(2);
 
+    if(!isNaN(bmi)){
+        
     const value = document.getElementById('value');
     let description = '';
 
-    value.classList.add('attention');
+    value.classList.add('atttention');
 
     document.getElementById('infos').classList.remove('hidden');
-
+    
     if(bmi < 18.5){
 
-        description = 'Cuidado! Voce está abaixo do peso!'
+        description = 'Cuidado! Voce está abaixo do peso!';
 
     }else if(bmi >= 18.5 && bmi <=25 ){
 
@@ -39,7 +41,22 @@ form.addEventListener('submit', function(event){
             description = "Cuidado! Voce está com obesidade morbida!";
         }
 
-    value.textContent = String(bmi).replace('.', ',');
+
+    value.textContent =  String(bmi).replace('.', ',');
     document.getElementById('description').textContent = description;
+    
+    }
 
 });
+
+form.addEventListener('keypress', function(event){
+
+    if(event.key === 'Enter'){
+
+        document.getElementById('calculate').click();  
+
+    }
+
+});
+
+
