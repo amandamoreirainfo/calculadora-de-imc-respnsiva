@@ -7,3 +7,5 @@ A Calculadora de IMC é uma aplicação web que permite aos usuários calcular o
 https://amandamoreirainfo.github.io/calculadora-de-imc-respnsiva/
 
 # Capturas de Tela
+<img src="assets/image/captura_calculadora_imc.jpeg">
+<img src="assets/image/captura_calculadora_imc_resultado.jpeg">
